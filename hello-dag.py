@@ -10,7 +10,7 @@ def hello_world():
 # Operators; we need this to operate!
 from airflow.operators.bash import BashOperator
 with DAG(
-    'Hello World',
+    'hello-world',
     description='A DAG for Saying Hello',
     schedule_interval=timedelta(hours=1),
     start_date=datetime(2021, 1, 1),
