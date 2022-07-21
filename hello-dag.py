@@ -6,6 +6,8 @@ import logging
 from airflow import DAG
 from airflow.decorators import task
 
+log = logging.getLogger(__name__)
+
 with DAG(
     dag_id='hello-world',
     description='A DAG for Saying Hello',
