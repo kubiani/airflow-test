@@ -20,13 +20,8 @@ with DAG(
     tags=['hello','example'],
 ) as dag:
     
-    t1 = BashOperator(
-        task_id='print_date',
-        bash_command='date',
-    )
-
-    t2 = PythonOperator(
+    say_hello = PythonOperator(
         task_id="hello_world",
         python_callable=hello_world)
 
-    t1 >> t2
+    say_hello
