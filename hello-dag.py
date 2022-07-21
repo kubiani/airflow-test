@@ -8,7 +8,7 @@ def hello_world():
     print("Hello World!")
 
 # Operators; we need this to operate!
-from airflow.operators.bash import BashOperator
+from airflow.operators.bash import BashOperator, PythonOperator
 with DAG(
     'hello-world',
     description='A DAG for Saying Hello',
