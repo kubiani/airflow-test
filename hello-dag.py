@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from pprint import pprint
+import logging
 
 # The DAG object; we'll need this to instantiate a DAG
 from airflow import DAG
@@ -16,6 +17,7 @@ with DAG(
     
     @task(task_id="say_hello")
     def hello_world(ds=None, **kwargs):
+        log.info("Saying hello")
         pprint(kwargs)
         print(ds)
         print("Hello World!")
