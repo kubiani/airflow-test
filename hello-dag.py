@@ -11,8 +11,8 @@ log = logging.getLogger(__name__)
 with DAG(
     dag_id='hello-world',
     description='A DAG for Saying Hello',
-#     schedule_interval=timedelta(hours=1),
-#     start_date=datetime(2021, 1, 1),
+    schedule_interval=timedelta(days=7),
+    start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=['hello','example'],
 ) as dag:
